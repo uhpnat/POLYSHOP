@@ -17,7 +17,7 @@ window.addEventListener('load',function(){
     nextBtn.addEventListener('click',function(){
         handleChangeSlide(1);
     })
-
+    
     prevBtn.addEventListener('click',function(){
         handleChangeSlide(-1);
     })
