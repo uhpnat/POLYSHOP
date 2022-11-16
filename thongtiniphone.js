@@ -167,8 +167,8 @@ function showItems(name, data, soLuong) {
         <h6>Giá từ: ${data[key].giaIphone.toLocaleString()}₫</h6>
         <p>Hot Sale giá chỉ: ${data[key].giamGiaIphone.toLocaleString()}₫</p>
         <div class="row btn--iphone ">
-                  <div class="col-6"><button type="button" class="btn btn-outline-danger w-100" onclick="indexAddCart(${key})">Thêm vào giỏ</button></div>
-                  <div class="col-6"><button type="button" class="btn btn-outline-danger w-100">Xem chi tiết</button></div>
+                  <div class="col-12"><button type="button" class="btn btn-outline-danger w-100" onclick="indexAddCart(${key})">Thêm vào giỏ</button></div>
+                //   <div class="col-6"><button type="button" class="btn btn-outline-danger w-100">Xem chi tiết</button></div>
                 </div>
     </div>
     </div>`
