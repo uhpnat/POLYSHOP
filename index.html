@@ -27,6 +27,7 @@
 
 <body style="background-color: #f2f2f2">
   
+  
   <!-- toast   -->
 
   <!-- toast   -->
@@ -40,12 +41,13 @@
         <img class="w-25 d-flex mx-auto" src="./img/add-to-cart.png" alt="">
       </div>
     </div>
-
-    <button type="button" class="btn btn-primary mr-auto ml-auto d-flex" onclick="clicknav(3) , closeNav()">Vào Giỏ Hàng</button>
+    
+    <button type="button" class="btn btn-primary mr-auto ml-auto d-flex mb-5" onclick="clicknav(3) , closeNav()">Vào Giỏ Hàng</button>
   </div>
   <script>
   function openNav() {
-    document.getElementById("mySidenav").style.width = "650px";
+    document.getElementById("mySidenav").style.width = "500px";
+
   }
   
   function closeNav() {
@@ -132,7 +134,7 @@
     slide
     slide
     slide -->
-    <!-- <div class="container p-0 px-3">
+    <div class="container p-0 px-3">
       <div class="slider d-xxl-block d-none">
         <box-icon class="slider-prev" name="chevron-left" animation="tada-hover" color="rgba(0,0,0,0.5"></box-icon>
         <ul class="slider-dots">
@@ -163,7 +165,7 @@
         </div>
         <box-icon class="slider-next" name="chevron-right" animation="tada-hover" color="rgba(0,0,0,0.5)"></box-icon>
       </div>
-    </div> -->
+    </div>
   
     <!-- 3 pahn quang cao  -->
     <!-- 3 pahn quang cao  -->
@@ -399,7 +401,7 @@
                       <h5 class="text-uppercase">Tổng</h5>
                       <h5 class="showGiaIphone">0₫</h5>
                     </div>
-  
+                    <button type="button" class="btn btn-primary" onclick="xoaAll()">xoa all</button>
                     <button type="button" class="btn btn-dark btn-block btn-lg"
                       data-mdb-ripple-color="dark">Register</button>
   
@@ -521,7 +523,7 @@
   </div>
   <script src="https://unpkg.com/boxicons@2.1.4/dist/boxicons.js"></script>
   <script src="./thongtiniphone.js"></script>
-  <!-- <script src="./js.js"></script> -->
+  <script src="./js.js"></script>
   
 </body>
 

@@ -151,7 +151,6 @@ function resetGia() {
 }
 // resetTongGia()
 //  
-var fullData = dataIphone.concat(dataIpad, dataWatch)
 function showItems(name, data, soLuong) {
     var htmlWebs = ''
     for (const key in data) {
@@ -168,7 +167,6 @@ function showItems(name, data, soLuong) {
         <p>Hot Sale giá chỉ: ${data[key].giamGiaIphone.toLocaleString()}₫</p>
         <div class="row btn--iphone ">
                   <div class="col-12"><button type="button" class="btn btn-outline-danger w-100" onclick="indexAddCart(${key})">Thêm vào giỏ</button></div>
-                //   <div class="col-6"><button type="button" class="btn btn-outline-danger w-100">Xem chi tiết</button></div>
                 </div>
     </div>
     </div>`
@@ -252,10 +250,52 @@ function itemShopping(name, data, soLuong) {
         <img class="w-25 d-flex mx-auto" src="./img/add-to-cart.png" alt="">`
     }
 }
+////////////////////
+function itemShoppingMini(name, data, soLuong) {
+    var sttHien = 0
+    var htmlWebs = ''
+    for (const key in data) {
+        var showItem = `<div class="row mb-4 d-flex justify-content-between align-items-center">
+        <div class="col-3">
+          <img
+            src="${data[key].imgIphone}"
+            class="img-fluid rounded-3" alt="Cotton T-shirt">
+        </div>
+        <div class="col-md-3 col-lg-3 col-xl-3">
+          <h6 class="text-text-black-50">${data[key].tenIphone}</h6>
+          <p class="text-muted mb-0">Số Lượng ${data[key].valueIP}</p>
+        </div>
+        <div class="col-md-3 col-lg-3 col-xl-2 d-flex">
+        </div>
+        <div class="col-md-3 col-lg-2 col-xl-2 offset-lg-1">
+          <h6 class="mb-0"> ${(data[key].giaIphone * data[key].valueIP).toLocaleString()}₫</h6>
+        </div>
+        <div class="col-md-1 col-lg-1 col-xl-1 text-end">
+          <button type="button" class="btn btn-danger" onclick="xoaSP(${key})">X</button>
+        </div>
+      </div>
+    
+      <hr class="my-4">`
+        if (data[key].valueIP >= 1) {
+            ++sttHien
+            htmlWebs += showItem
+        }
+        if (key == soLuong - 1) {
+            break
+        }
+    }
+
+    document.getElementById(name).innerHTML = htmlWebs
+    if (sttHien == 0) {
+        document.getElementById(name).innerHTML = `<h4 class="text-danger text-center">Giỏ hàng trống</h4>
+        <img class="w-25 d-flex mx-auto" src="./img/add-to-cart.png" alt="">`
+    }
+}
+////////////////////
 function indexAddCart(index) {
     dataIphone[index].valueIP += 1
     itemShopping('IDitemCart', dataIphone)
-    itemShopping('IDitemCart-mini', dataIphone)
+    itemShoppingMini('IDitemCart-mini', dataIphone)
     if(dataIphone[index].valueIP==1){
         alert('Sản phẩm đã được thêm vào giỏ hàng')
     }
@@ -274,7 +314,7 @@ function giamSoLuong(index) {
 
         dataIphone[index].valueIP -= 1
         itemShopping('IDitemCart', dataIphone)
-        itemShopping('IDitemCart-mini', dataIphone)
+        itemShoppingMini('IDitemCart-mini', dataIphone)
 
         // alert('Sản phẩm đã được thêm vào giỏ hàng')
         resetSoLuong()
@@ -286,7 +326,7 @@ function xoaSP(index) {
 
     dataIphone[index].valueIP = 0
     itemShopping('IDitemCart', dataIphone)
-    itemShopping('IDitemCart-mini', dataIphone)
+    itemShoppingMini('IDitemCart-mini', dataIphone)
     // alert('Sản phẩm đã được thêm vào giỏ hàng')
     resetSoLuong()
     resetGia()
@@ -299,4 +339,12 @@ function dlBlockShow() {
 function dlNoneShow() {
     document.querySelector('.khongChoBam').classList.add('d-flex')
     document.querySelector('.choBam').classList.remove('d-flex')
+}
+function xoaAll(){
+    for (const key in dataIphone) {
+        dataIphone[key].valueIP =0
+        console.log(dataIphone[key].valueIP)
+        xoaSP(key)
+    }
+
 }
