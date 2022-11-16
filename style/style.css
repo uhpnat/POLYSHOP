@@ -4,17 +4,56 @@
   box-sizing: border-box;
 }
 
+.sidenav {
+  border-radius: 20px 0px 0px 20px;
+  box-shadow: 5px 5px 150px black;
+  height: 100%;
+  width: 0;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  right: 0;
+  background-color: rgba(255, 255, 255, 0.95);
+  overflow-x: hidden;
+  transition: 0.5s;
+  padding-top: 60px;
+}
+.sidenav a {
+  padding: 8px 32px 8px 8px;
+  text-decoration: none;
+  font-size: 25px;
+  color: #818181;
+  display: block;
+  transition: 0.3s;
+}
+.sidenav a:hover {
+  color: #f1f1f1;
+}
+.sidenav .closebtn {
+  position: absolute;
+  top: 0;
+  left: 25px;
+  font-size: 36px;
+  margin-right: 50px;
+}
+.sidenav .pd-mini {
+  padding: 40px;
+}
+
 .shop-iphone--item {
   margin-top: 20px;
-  transition: 0.4s;
-  box-shadow: 0px 0px 8px 0px rgba(0, 0, 0, 0.04);
+  transition: 1s;
+  box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.04);
   background-color: white;
   border-radius: 6px;
   padding: 10px;
 }
 .shop-iphone--item:hover {
-  box-shadow: 1px 1px 28px 0px rgba(0, 0, 0, 0.12);
+  box-shadow: 1px 1px 28px 0px rgba(0, 0, 0, 0.22);
   border-width: 1px 1px 1px 1px;
+}
+.shop-iphone--item:hover img {
+  opacity: 0.6;
 }
 .shop-iphone--item h5 {
   padding: 26px 0px;
@@ -30,13 +69,44 @@
   width: 50px;
   height: 50px;
   float: right;
+  opacity: 1;
 }
 .shop-iphone--item---iphone img {
+  transition: 0.5s;
   width: 100%;
 }
 
 #top-main-navigation {
-  background: linear-gradient(-50deg, #343a40, #343a40, #000000, #17a2b8);
+  background: linear-gradient(-50deg, #addc13, #0c85ff, #000000, #17a2b8);
+  background-size: 320% 200%;
+  -webkit-animation: Gradient 15s ease infinite;
+  animation: Gradient 15s ease infinite;
+}
+
+@-webkit-keyframes Gradient {
+  0% {
+    background-position: 0 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0 50%;
+  }
+}
+@keyframes Gradient {
+  0% {
+    background-position: 0 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0 50%;
+  }
+}
+.bg-mausac:hover {
+  background: linear-gradient(-50deg, #c50000, #0cff79, #edea19, #0691ee);
   background-size: 320% 200%;
   -webkit-animation: Gradient 15s ease infinite;
   animation: Gradient 15s ease infinite;

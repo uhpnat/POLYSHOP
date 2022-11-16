@@ -14,11 +14,46 @@
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha1/js/bootstrap.min.js"
     integrity="sha384-oesi62hOLfzrys4LxRF63OJCXdXDipiYWBnvTl9Y9/TRlw5xlKIEHpNyvvDShgf/"
     crossorigin="anonymous"></script>
+    
+<!-- //////test -->
+
+
+  <!-- enddtesst  -->
+  <!-- enddtesst  -->
+
+
+
 </head>
 
 <body style="background-color: #f2f2f2">
+  
+  <!-- toast   -->
+
+  <!-- toast   -->
+  <!-- toast   -->
+
+  <div id="mySidenav" class="sidenav">
+    <a style="cursor:pointer" class="closebtn" onclick="closeNav()"><box-icon name='message-square-x' animation='tada-hover' size='md' color="red" ></box-icon></a>
+    <div class="pd-mini">
+      <div id="IDitemCart-mini">
+        <h4 class="text-danger text-center">Giỏ hàng trống</h4>
+        <img class="w-25 d-flex mx-auto" src="./img/add-to-cart.png" alt="">
+      </div>
+    </div>
+
+    <button type="button" class="btn btn-primary mr-auto ml-auto d-flex" onclick="clicknav(3) , closeNav()">Vào Giỏ Hàng</button>
+  </div>
+  <script>
+  function openNav() {
+    document.getElementById("mySidenav").style.width = "650px";
+  }
+  
+  function closeNav() {
+    document.getElementById("mySidenav").style.width = "0";
+  }
+  </script>
   <!-- header  -->
-  <header class="navbar navbar-expand-lg navbar-dark" id="top-main-navigation">
+  <header class="navbar navbar-expand-lg navbar-dark " id="top-main-navigation">
     <div class="container">
       <div class="col-lg-3 col-md-3">
         <a class="navbar-brand" href="#"><b>POLY</b>Shop</a>
@@ -41,7 +76,7 @@
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
           <ul class="navbar-nav ml-auto mb-2 mb-lg-0">
             <li class="nav-item">
-              <a class="nav-link pr-2" aria-current="page" href="./iphone.html">IPHONE</a>
+              <a class="nav-link pr-2" aria-current="page" onclick="clicknav(2)" style="cursor: pointer;">IPHONE</a>
             </li>
             <li class="nav-item">
               <a class="nav-link disabled" aria-current="page" href="./ipad.html">Ipad</a>
@@ -52,9 +87,9 @@
 
             <li class="nav-item"></li>
             <li class="nav-item">
-              <a class="nav-link" href="./cart.html" tabindex="-1" aria-disabled="true"><svg
+              <a onclick="openNav()" class="nav-link"  tabindex="-1" aria-disabled="true"><svg
                   xmlns="http://www.w3.org/2000/svg" width="25" height="25" viewBox="0 0 25 25"
-                  style="fill: rgb(255, 255, 255)">
+                  style="fill: rgb(255, 255, 255); cursor: pointer;">
                   <path
                     d="M5 22h14c1.103 0 2-.897 2-2V9a1 1 0 0 0-1-1h-3V7c0-2.757-2.243-5-5-5S7 4.243 7 7v1H4a1 1 0 0 0-1 1v11c0 1.103.897 2 2 2zM9 7c0-1.654 1.346-3 3-3s3 1.346 3 3v1H9V7zm-4 3h2v2h2v-2h6v2h2v-2h2l.002 10H5V10z">
                   </path>
@@ -67,326 +102,319 @@
   </header>
 
   <!-- nav  -->
-  <ul class="nav nav-tabs mt-3 mb-3">
-    <li class="nav-item">
-      <a class="nav-link text-dark active" href="./index.html">POLYShop</a>
-    </li>
-    <li class="nav-item">
-      <a class="nav-link text-dark" href="./iphone.html">IPHONE</a>
-    </li>
-    <li class="nav-item">
-      <a class="nav-link text-dark disabled" href="#">Ipad</a>
-    </li>
-    <li class="nav-item">
-      <a class="nav-link text-dark disabled" href="#">Watch</a>
-    </li>
-    <li class="nav-item">
-      <a class="nav-link text-dark" href="./cart.html">Giỏ Hàng</a>
-    </li>
-    <li class="nav-item">
-      <a class="nav-link disabled" href="#">Disabled</a>
-    </li>
-  </ul>
+  
 
   <!-- ////// -->
 
   <!-- slider  -->
-  <div class="container-fluid p-0">
-    <div class="slider d-xxl-block d-none">
-      <box-icon class="slider-prev" name="chevron-left" animation="tada-hover" color="rgba(0,0,0,0.5"></box-icon>
-      <ul class="slider-dots">
-        <li class="slider-dot-item active" data-index="0"></li>
-        <li class="slider-dot-item" data-index="1"></li>
-        <li class="slider-dot-item" data-index="2"></li>
-        <li class="slider-dot-item" data-index="3"></li>
-        <li class="slider-dot-item" data-index="4"></li>
-      </ul>
-      <div class="slider-wrapper">
-        <div class="slider-main">
-          <div class="slider-item">
-            <img src="./img/1.webp" alt="" />
+  <div id="nonepolyshop">
+    <ul class="nav nav-tabs mt-3 mb-3">
+      <li class="nav-item">
+        <a class="nav-link text-dark active" style="cursor:pointer" onclick="clicknav(1)" id="polyshopNav">POLYShop</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link text-dark" style="cursor:pointer" onclick="clicknav(2)"id="iphoneNav">IPHONE</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link text-dark disabled">Ipad</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link text-dark disabled">Watch</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link text-dark " style="cursor:pointer"onclick="clicknav(3)" id="cartNav" >Giỏ Hàng</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link disabled">Disabled</a>
+      </li>
+    </ul>
+    <!-- slide
+    slide
+    slide
+    slide -->
+    <!-- <div class="container p-0 px-3">
+      <div class="slider d-xxl-block d-none">
+        <box-icon class="slider-prev" name="chevron-left" animation="tada-hover" color="rgba(0,0,0,0.5"></box-icon>
+        <ul class="slider-dots">
+          <li class="slider-dot-item active" data-index="0"></li>
+          <li class="slider-dot-item" data-index="1"></li>
+          <li class="slider-dot-item" data-index="2"></li>
+          <li class="slider-dot-item" data-index="3"></li>
+          <li class="slider-dot-item" data-index="4"></li>
+        </ul>
+        <div class="slider-wrapper">
+          <div class="slider-main">
+            <div class="slider-item">
+              <img src="./img/1.webp" alt="" />
+            </div>
+            <div class="slider-item">
+              <img src="./img/2.webp" alt="" />
+            </div>
+            <div class="slider-item">
+              <img src="./img/3.webp" alt="" />
+            </div>
+            <div class="slider-item">
+              <img src="./img/4.webp" alt="" />
+            </div>
+            <div class="slider-item">
+              <img src="./img/5.webp" alt="" />
+            </div>
           </div>
-          <div class="slider-item">
-            <img src="./img/2.webp" alt="" />
+        </div>
+        <box-icon class="slider-next" name="chevron-right" animation="tada-hover" color="rgba(0,0,0,0.5)"></box-icon>
+      </div>
+    </div> -->
+  
+    <!-- 3 pahn quang cao  -->
+    <!-- 3 pahn quang cao  -->
+    <!-- 3 pahn quang cao  -->
+    <div class="quangcao-3 mt-3">
+      <div class="container">
+        <div class="row">
+          <div class="col-4">
+            <img style="width: 100%" src="./img/quangcao-1.webp" alt="" />
           </div>
-          <div class="slider-item">
-            <img src="./img/3.webp" alt="" />
+          <div class="col-4">
+            <img style="width: 100%" src="./img/quangcao-2.webp" alt="" />
           </div>
-          <div class="slider-item">
-            <img src="./img/4.webp" alt="" />
-          </div>
-          <div class="slider-item">
-            <img src="./img/5.webp" alt="" />
+          <div class="col-4">
+            <img style="width: 100%" src="./img/quangcao-3.webp" alt="" />
           </div>
         </div>
       </div>
-      <box-icon class="slider-next" name="chevron-right" animation="tada-hover" color="rgba(0,0,0,0.5)"></box-icon>
     </div>
-  </div>
-
-  <!-- 3 pahn quang cao  -->
-  <!-- 3 pahn quang cao  -->
-  <!-- 3 pahn quang cao  -->
-  <div class="quangcao-3 mt-3">
+  
+    <h1 class="text-center mt-4">iPhone</h1>
+  
+    <div class="shop-iphone">
+      <div class="container">
+        <div class="row pb-5 px-0" id="iphone">
+          <!-- ////////////////////////////// -->
+        </div>
+        <button type="button" class="btn btn-outline-primary ml-auto mr-auto d-flex d-none khongChoBam" onclick="showItems('iphone',dataIphone), dlBlockShow()">Xem tất cả iPhone ></button>
+        <button type="button" class="btn btn-outline-primary ml-auto mr-auto d-none  d-none choBam" onclick="showItems('iphone',dataIphone,4), dlNoneShow()">thu gọn lại ^</button>
+      </div>
+    </div>
+    <h1 class="text-center mt-4">iPad</h1>
+  
+    <div class="shop-iphone">
+      <div class="container">
+        <div class="row pb-5 px-0" id="ipad">
+          <!-- ////////////////////////////// -->
+        </div>
+        <button type="button" class="btn btn-outline-primary ml-auto mr-auto d-flex disabled">Xem tất cả iPad ></button>
+      </div>
+    </div>
+    <h1 class="text-center mt-4">Watch</h1>
+  
+    <div class="shop-iphone">
+      <div class="container">
+        <div class="row pb-5 px-0" id="watch">
+          <!-- ////////////////////////////// -->
+        </div>
+        <button type="button" class="btn btn-outline-primary ml-auto mr-auto d-flex disabled">Xem tất cả Watch ></button>
+      </div>
+    </div>
+  
+    <!-- endd -->
     <div class="container">
-      <div class="row">
-        <div class="col-4">
-          <img style="width: 100%" src="./img/quangcao-1.webp" alt="" />
-        </div>
-        <div class="col-4">
-          <img style="width: 100%" src="./img/quangcao-2.webp" alt="" />
-        </div>
-        <div class="col-4">
-          <img style="width: 100%" src="./img/quangcao-3.webp" alt="" />
+      <img style="width: 100%" class="mt-5" src="./img/sapend.webp" alt="" />
+    </div>
+  </div>
+
+  <div id="noneiphone" style="display: none;">
+    
+    <ul class="nav nav-tabs mt-3 mb-3">
+      <li class="nav-item">
+        <a class="nav-link text-dark" style="cursor:pointer" onclick="clicknav(1)" id="polyshopNav">POLYShop</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link text-dark active" style="cursor:pointer" onclick="clicknav(2)"id="iphoneNav">IPHONE</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link text-dark disabled">Ipad</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link text-dark disabled">Watch</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link text-dark " style="cursor:pointer"onclick="clicknav(3)" id="cartNav" >Giỏ Hàng</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link disabled">Disabled</a>
+      </li>
+    </ul>
+    <h1 class="text-center mt-4">iPhone</h1>
+
+    <ul class="nav justify-content-center">
+      <li class="nav-item">
+        <a class="nav-link active text-dark" aria-current="page" href="#">Tất Cả</a>
+      </li>
+
+      <li class="nav-item">
+        <a class="nav-link text-black-50" style="cursor: pointer;" >iPhone 14</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link text-black-50" style="cursor: pointer;" >iPhone 13</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link text-black-50" style="cursor: pointer;" >iPhone 12</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link text-black-50" style="cursor: pointer;" >iPhone 11</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link text-black-50" style="cursor: pointer;" >iPhone SE</a>
+      </li>
+    </ul>
+
+    <div class="shop-iphone">
+      <div class="container">
+        <div class="row pb-5" id="thongTinIphone">
+          <!-- ////////////////////////////// -->
+          <!-- ////////////////////////////// -->
+          <!-- ////////////////////////////// -->
+          <!-- ////////////////////////////// -->
         </div>
       </div>
     </div>
   </div>
+  <!-- ////// -->
+ <div id="nonecart" style="display:none ;">
+  <ul class="nav nav-tabs mt-3 mb-3">
+    <li class="nav-item">
+      <a class="nav-link text-dark " style="cursor:pointer" onclick="clicknav(1)" id="polyshopNav">POLYShop</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link text-dark" style="cursor:pointer" onclick="clicknav(2)"id="iphoneNav">IPHONE</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link text-dark disabled">Ipad</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link text-dark disabled">Watch</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link text-dark active" style="cursor:pointer"onclick="clicknav(3)" id="cartNav" >Giỏ Hàng</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link disabled">Disabled</a>
+    </li>
+  </ul>
+  <h1 class="text-center mt-4">Giỏ Hàng</h1>
 
-  <!-- <ul class="nav justify-content-center">
-      <li class="nav-item">
-        <a class="nav-link active text-dark" aria-current="page" href="#"
-          >Tất Cả</a
-        >
-      </li>
-      
-      <li class="nav-item">
-        <a class="nav-link text-black-50" href="#">iPhone 14</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link text-black-50" href="#">iPhone 13</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link text-black-50" href="#">iPhone 12</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link text-black-50" href="#">iPhone 11</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link text-black-50" href="#">iPhone SE</a>
-      </li>
-    </ul> -->
-  <!-- ihpoenne
-    ihpoenne
-    ihpoenne -->
-  <h1 class="text-center mt-4">iPhone</h1>
+  <!-- slider  -->
+  
 
-  <div class="shop-iphone">
-    <div class="container">
-      <div class="row pb-5 px-0">
-        <!-- /////////////////////// -->
-        <div class="col-xl-3 col-md-4 col-6">
-          <div class="shop-iphone--item">
-            <div class="shop-iphone--item---thongbao">
-              <img  class="d-md-block d-none" src="./img/mung-khai-truong-icon.svg" alt="" />
+
+  <section class="h-100 h-custom" style="background-color: #F2F2F2;">
+    <div class="container py-5 h-100">
+      <div class="row d-flex justify-content-center align-items-center h-100">
+        <div class="col-12">
+          <div class="card card-registration card-registration-2" style="border-radius: 15px;">
+            <div class="card-body p-0">
+              <div class="row g-0">
+                <div class="col-lg-8">
+                  <div class="p-5">
+                    <div class="d-flex justify-content-between align-items-center mb-5">
+                      <h1 class="fw-bold mb-0 text-black">Shopping Cart</h1>
+                      <h6 class="mb-0 text-muted"><span class="sll">0</span> SL</h6>
+                    </div>
+                    <hr class="my-4">
+  <!-- ////////// -->
+                    <div id="IDitemCart">
+                      <h4 class="text-danger text-center">Giỏ hàng trống</h4>
+                      <img class="w-25 d-flex mx-auto" src="./img/add-to-cart.png" alt="">
+                      <!-- <div class="row mb-4 d-flex justify-content-between align-items-center">
+                        <div class="col-md-2 col-lg-2 col-xl-2">
+                          <img
+                            src="./img/iphone-11-green-1-650x650-2.png"
+                            class="img-fluid rounded-3" alt="Cotton T-shirt">
+                        </div>
+                        <div class="col-md-3 col-lg-3 col-xl-3">
+                          <h5 class="text-muted">iPhone</h5>
+                          <h6 class="text-black mb-0">Cotton T-shirt</h6>
+                        </div>
+                        <div class="col-md-3 col-lg-3 col-xl-2 d-flex">
+  
+                          <button type="button" class="btn btn-primary" onclick="this.parentNode.querySelector('input[type=number]').stepDown()">-</button>
+    
+                          <input style="width:40px ;" class="text-center mx-3" type="number"value="1">
+                          <button type="button" class="btn btn-primary" onclick="this.parentNode.querySelector('input[type=number]').stepUp()">+</button>
+                        </div>
+                        <div class="col-md-3 col-lg-2 col-xl-2 offset-lg-1">
+                          <h6 class="mb-0"> 44.000₫</h6>
+                        </div>
+                        <div class="col-md-1 col-lg-1 col-xl-1 text-end">
+                          <button type="button" class="btn btn-danger">X</button>
+                        </div>
+                      </div>
+    
+                      <hr class="my-4"> -->
+                    </div>
+  <!-- ////////// -->
+
+                    
+  
+                   
+  
+                    <!-- <div class="pt-5">
+                      <h6 class="mb-0"><a href="#!" class="text-body"><i
+                            class="fas fa-long-arrow-alt-left me-2"></i>Back to shop</a></h6>
+                    </div> -->
+                  </div>
+                </div>
+                <div class="col-lg-4 bg-grey">
+                  <div class="p-5">
+                    <h3 class="fw-bold mb-5 mt-2 pt-1">Tổng Giỏ Hàng</h3>
+                    <hr class="my-4">
+  
+                    <div class="d-flex justify-content-between mb-4">
+                      <h5 class="text-uppercase">Số Lượng <span  class="sll">0</span></h5>
+                      <h5 class="showGiaIphone">0₫</h5>
+                    </div>
+  
+                    <h5 class="text-uppercase mb-3">Đơn vị giao hàng</h5>
+  
+                    <div class="mb-4 pb-2">
+                      <select id="selecttt" class="select form-control" onchange="resetGia()">
+                        <option value="50000" onchange = "giamGia(1)">Shopee  - 50.000₫</option>
+                        <option value="100000" onchange = "giamGia(2)">Grap  - 100.000₫</option>
+                        <option value="20000" onchange = "giamGia(3)">GHTK - 20.000₫</option>
+                      </select>
+                    </div>
+  
+                    <!-- <h5 class="text-uppercase mb-3">nhập mã giảm giá</h5>
+  
+                    <div class="mb-5">
+                      <div class="form-outline">
+                        <input type="text" id="form3Examplea2" class="form-control form-control-lg" />
+                        <label class="form-label" for="form3Examplea2">Enter your code</label>
+                      </div>
+                    </div> -->
+  
+                    <hr class="my-4">
+  
+                    <div class="d-flex justify-content-between mb-5">
+                      <h5 class="text-uppercase">Tổng</h5>
+                      <h5 class="showGiaIphone">0₫</h5>
+                    </div>
+  
+                    <button type="button" class="btn btn-dark btn-block btn-lg"
+                      data-mdb-ripple-color="dark">Register</button>
+  
+                  </div>
+                </div>
+              </div>
             </div>
-            <div class="shop-iphone--item---iphone">
-              <img src="./img/iphone-11-green-1-650x650-2.png" alt="" />
-            </div>
-            <h5>iPhone 11 64GB</h5>
-            <h6>Giá từ: 10.990.000₫</h6>
-            <p>Hot Sale giá chỉ: 10.450.000đ</p>
           </div>
         </div>
-        <!-- ////////////////////////////// -->
-        <div class="col-xl-3 col-md-4 col-6">
-          <div class="shop-iphone--item">
-            <div class="shop-iphone--item---thongbao">
-              <img class="d-md-block d-none" src="./img/mung-khai-truong-icon.svg" alt="" />
-            </div>
-            <div class="shop-iphone--item---iphone">
-              <img src="./img/iphone-11-green-1-650x650-2.png" alt="" />
-            </div>  
-            <h5>iPhone 11 64GB</h5>
-            <h6>Giá từ: 10.990.000₫</h6>
-            <p>Hot Sale giá chỉ: 10.450.000đ</p>
-          </div>
-        </div>
-        <!-- ////////////////////////////// -->
-        <div class="col-xl-3 col-md-4 col-6">
-          <div class="shop-iphone--item">
-            <div class="shop-iphone--item---thongbao">
-              <img class="d-md-block d-none" src="./img/mung-khai-truong-icon.svg" alt="" />
-            </div>
-            <div class="shop-iphone--item---iphone">
-              <img src="./img/iphone-11-green-1-650x650-2.png" alt="" />
-            </div>
-            <h5>iPhone 11 64GB</h5>
-            <h6>Giá từ: 10.990.000₫</h6>
-            <p>Hot Sale giá chỉ: 10.450.000đ</p>
-          </div>
-        </div>
-        <!-- ////////////////////////////// -->
-        <div class="col-xl-3 col-md-4 col-6">
-          <div class="shop-iphone--item">
-            <div class="shop-iphone--item---thongbao">
-              <img class="d-md-block d-none" src="./img/mung-khai-truong-icon.svg" alt="" />
-            </div>
-            <div class="shop-iphone--item---iphone">
-              <img src="./img/iphone-11-green-1-650x650-2.png" alt="" />
-            </div>
-            <h5>iPhone 11 64GB</h5>
-            <h6>Giá từ: 10.990.000₫</h6>
-            <p>Hot Sale giá chỉ: 10.450.000đ</p>
-          </div>
-        </div>
-        <!-- ////////////////////////////// -->
-        <!-- ////////////////////////////// -->
       </div>
-      <a class="text-decoration-none" href="./iphone.html"><button type="button"
-          class="btn btn-outline-primary ml-auto mr-auto d-flex">
-          Xem tất cả iPhone >
-        </button></a>
     </div>
-  </div>
-  <!-- ipadipadipadipadipad -->
-  <!-- ipadipadipadipadipad -->
-  <!-- ipadipadipadipadipad -->
-  <h1 class="text-center mt-4">iPad</h1>
-
-  <div class="shop-iphone">
-    <div class="container">
-      <div class="row pb-5">
-        <div class="col-xl-3 col-md-4 col-6">
-          <div class="shop-iphone--item">
-            <div class="shop-iphone--item---thongbao">
-              <img src="./img/mung-khai-truong-icon.svg" alt="" />
-            </div>
-            <div class="shop-iphone--item---iphone">
-              <img src="./img/ipad-1.webp" alt="" />
-            </div>
-            <h5>iPhone 11 64GB</h5>
-            <h6>Giá từ: 10.990.000₫</h6>
-            <p>Hot Sale giá chỉ: 10.450.000đ</p>
-          </div>
-        </div>
-        <!-- ////////////////////////////// -->
-        <div class="col-xl-3 col-md-4 col-6">
-          <div class="shop-iphone--item">
-            <div class="shop-iphone--item---thongbao">
-              <img src="./img/mung-khai-truong-icon.svg" alt="" />
-            </div>
-            <div class="shop-iphone--item---iphone">
-              <img src="./img/ipad-1.webp" alt="" />
-            </div>
-            <h5>iPhone 14 128GB</h5>
-            <h6>Giá từ: 20.950.000₫</h6>
-            <p>Flash Sale giá chỉ: 19.950.000đ</p>
-          </div>
-        </div>
-        <!-- ////////////////////////////// -->
-        <div class="col-xl-3 col-md-4 col-6">
-          <div class="shop-iphone--item">
-            <div class="shop-iphone--item---thongbao">
-              <img src="./img/STICKER-SAN-HANG-02.svg" alt="" />
-            </div>
-            <div class="shop-iphone--item---iphone">
-              <img src="./img/ipad-1.webp" alt="" />
-            </div>
-            <h5>iPhone 14 Pro Max 128GB</h5>
-            <h6>Giá từ: 32.850.000đ</h6>
-            <p>Mua ngay không cần cọc</p>
-          </div>
-        </div>
-
-        <!-- ////////////////////////////// -->
-        <div class="col-xl-3 col-md-4 col-6">
-          <div class="shop-iphone--item">
-            <div class="shop-iphone--item---thongbao">
-              <img src="./img/STICKER-SAN-HANG-02.svg" alt="" />
-            </div>
-            <div class="shop-iphone--item---iphone">
-              <img src="./img/ipad-1.webp" alt="" />
-            </div>
-            <h5>iPhone 14 Pro Max 128GB</h5>
-            <h6>Giá từ: 32.850.000đ</h6>
-            <p>Mua ngay không cần cọc</p>
-          </div>
-        </div>
-        <!-- ////////////////////////////// -->
-      </div>
-      <button type="button" class="btn btn-outline-primary ml-auto mr-auto d-flex disabled">
-        Xem tất cả iPad >
-      </button>
-    </div>
-  </div>
-  <!-- watchwatchwatchwatchwatch -->
-  <h1 class="text-center mt-4">Watch</h1>
-
-  <div class="shop-iphone">
-    <div class="container">
-      <div class="row pb-5">
-        <div class="col-xl-3 col-md-4 col-6">
-          <div class="shop-iphone--item">
-            <div class="shop-iphone--item---thongbao">
-              <img src="./img/mung-khai-truong-icon.svg" alt="" />
-            </div>
-            <div class="shop-iphone--item---iphone">
-              <img src="./img/watch-1.webp" alt="" />
-            </div>
-            <h5>iPhone 11 64GB</h5>
-            <h6>Giá từ: 10.990.000₫</h6>
-            <p>Hot Sale giá chỉ: 10.450.000đ</p>
-          </div>
-        </div>
-        <!-- ////////////////////////////// -->
-        <div class="col-xl-3 col-md-4 col-6">
-          <div class="shop-iphone--item">
-            <div class="shop-iphone--item---thongbao">
-              <img src="./img/mung-khai-truong-icon.svg" alt="" />
-            </div>
-            <div class="shop-iphone--item---iphone">
-              <img src="./img/watch-1.webp" alt="" />
-            </div>
-            <h5>iPhone 14 128GB</h5>
-            <h6>Giá từ: 20.950.000₫</h6>
-            <p>Flash Sale giá chỉ: 19.950.000đ</p>
-          </div>
-        </div>
-        <!-- ////////////////////////////// -->
-        <div class="col-xl-3 col-md-4 col-6">
-          <div class="shop-iphone--item">
-            <div class="shop-iphone--item---thongbao">
-              <img src="./img/STICKER-SAN-HANG-02.svg" alt="" />
-            </div>
-            <div class="shop-iphone--item---iphone">
-              <img src="./img/watch-1.webp" alt="" />
-            </div>
-            <h5>iPhone 14 Pro Max 128GB</h5>
-            <h6>Giá từ: 32.850.000đ</h6>
-            <p>Mua ngay không cần cọc</p>
-          </div>
-        </div>
-
-        <!-- ////////////////////////////// -->
-        <div class="col-xl-3 col-md-4 col-6">
-          <div class="shop-iphone--item">
-            <div class="shop-iphone--item---thongbao">
-              <img src="./img/STICKER-SAN-HANG-02.svg" alt="" />
-            </div>
-            <div class="shop-iphone--item---iphone">
-              <img src="./img/watch-1.webp" alt="" />
-            </div>
-            <h5>iPhone 14 Pro Max 128GB</h5>
-            <h6>Giá từ: 32.850.000đ</h6>
-            <p>Mua ngay không cần cọc</p>
-          </div>
-        </div>
-        <!-- ////////////////////////////// -->
-      </div>
-      <button type="button" class="btn btn-outline-primary ml-auto mr-auto d-flex disabled">
-        Xem tất cả Watch >
-      </button>
-    </div>
-  </div>
-  <div class="container">
-    <img style="width: 100%" class="mt-5" src="./img/sapend.webp" alt="" />
-  </div>
+  </section>
+ </div>
   <!-- foootter -->
   <hr />
-  <!-- Footer -->
-
-  <!-- Remove the container if you want to extend the Footer to full width. -->
   <div class="container-fluid p-0">
     <!-- Footer -->
     <footer class="text-center text-white" style="background-color: #000000ca">
@@ -491,10 +519,12 @@
     </footer>
     <!-- Footer -->
   </div>
-  <!-- End of .container -->
-
   <script src="https://unpkg.com/boxicons@2.1.4/dist/boxicons.js"></script>
-  <script src="./js.js"></script>
+  <script src="./thongtiniphone.js"></script>
+  <!-- <script src="./js.js"></script> -->
+  
 </body>
+
+
 
 </html>
