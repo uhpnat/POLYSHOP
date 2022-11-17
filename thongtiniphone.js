@@ -236,8 +236,10 @@ function itemShopping(name, data, soLuong) {
 
   <hr class="my-4">`
         if (data[key].valueIP >= 1) {
+
             ++sttHien
             htmlWebs += showItem
+            document.getElementById('xoaall').innerHTML = `<button type="button" class="btn btn-danger" onclick="xoaAll()">Xóa Tất Cả (${sttHien}) </button>`
         }
         if (key == soLuong - 1) {
             break
@@ -248,6 +250,7 @@ function itemShopping(name, data, soLuong) {
     if (sttHien == 0) {
         document.getElementById(name).innerHTML = `<h4 class="text-danger text-center">Giỏ hàng trống</h4>
         <img class="w-25 d-flex mx-auto" src="./img/add-to-cart.png" alt="">`
+        document.getElementById('xoaall').innerHTML = ''
     }
 }
 ////////////////////
@@ -279,6 +282,7 @@ function itemShoppingMini(name, data, soLuong) {
         if (data[key].valueIP >= 1) {
             ++sttHien
             htmlWebs += showItem
+            document.getElementById('xoaall').innerHTML = `<button type="button" class="btn btn-danger" onclick="xoaAll()">Xóa Tất Cả (${sttHien}) </button>`
         }
         if (key == soLuong - 1) {
             break
@@ -289,6 +293,8 @@ function itemShoppingMini(name, data, soLuong) {
     if (sttHien == 0) {
         document.getElementById(name).innerHTML = `<h4 class="text-danger text-center">Giỏ hàng trống</h4>
         <img class="w-25 d-flex mx-auto" src="./img/add-to-cart.png" alt="">`
+        document.getElementById('xoaall').innerHTML = `<button type="button" class="btn btn-danger" onclick="xoaAll()">Xóa Tất Cả (${sttHien}) </button>`
+
     }
 }
 ////////////////////
@@ -346,9 +352,28 @@ function xoaAll(){
         console.log(dataIphone[key].valueIP)
         xoaSP(key)
     }
+    document.getElementById('xoaall').innerHTML = ''
 
 }
-// window.oncontextmenu = (e) => {
-//     e.preventDefault()
-//     console.log('right clicked')
-//   }
+
+//   document.addEventListener(('contextmenu'),function(event){
+//     event.preventDefault();
+//     openNav()
+
+//   })
+//   document.addEventListener('click',function(){
+//     // closeNav()
+//   })
+
+
+  window.addEventListener('scroll',function(){
+    var scrollBackToTop = this.document.querySelector('.scrollTop')
+    scrollBackToTop.classList.toggle('active',window.scrollY > 500)
+    
+  })
+  function scrollTopne(){
+    window.scrollTo({
+        top:0,
+        behavior: 'smooth'
+    })
+}
