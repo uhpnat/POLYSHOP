@@ -297,7 +297,7 @@ function indexAddCart(index) {
     itemShopping('IDitemCart', dataIphone)
     itemShoppingMini('IDitemCart-mini', dataIphone)
     if(dataIphone[index].valueIP==1){
-        alert('Sản phẩm đã được thêm vào giỏ hàng')
+        // alert('Sản phẩm đã được thêm vào giỏ hàng')
     }
     resetSoLuong()
     resetGia()
@@ -348,3 +348,7 @@ function xoaAll(){
     }
 
 }
+// window.oncontextmenu = (e) => {
+//     e.preventDefault()
+//     console.log('right clicked')
+//   }

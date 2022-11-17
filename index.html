@@ -33,7 +33,7 @@
   <!-- toast   -->
   <!-- toast   -->
 
-  <div id="mySidenav" class="sidenav">
+  <div style="width: 500px; transform:translateX(600px) ; z-index: 999;" id="mySidenav" class="sidenav">
     <a style="cursor:pointer" class="closebtn" onclick="closeNav()"><box-icon name='message-square-x' animation='tada-hover' size='md' color="red" ></box-icon></a>
     <div class="pd-mini">
       <div id="IDitemCart-mini">
@@ -46,12 +46,15 @@
   </div>
   <script>
   function openNav() {
-    document.getElementById("mySidenav").style.width = "500px";
+    document.getElementById("mySidenav").style.transform = "translateX(0px)";
+
+
 
   }
   
   function closeNav() {
-    document.getElementById("mySidenav").style.width = "0";
+    document.getElementById("mySidenav").style.transform = "translateX(600px)";
+
   }
   </script>
   <!-- header  -->
@@ -355,8 +358,10 @@
                       <hr class="my-4"> -->
                     </div>
   <!-- ////////// -->
+<div id="xoaall">
+  <button type="button" class="btn btn-danger" onclick="xoaAll()">xoa all</button>
 
-                    
+</div>                    
   
                    
   
@@ -401,7 +406,7 @@
                       <h5 class="text-uppercase">Tổng</h5>
                       <h5 class="showGiaIphone">0₫</h5>
                     </div>
-                    <button type="button" class="btn btn-primary" onclick="xoaAll()">xoa all</button>
+                    
                     <button type="button" class="btn btn-dark btn-block btn-lg"
                       data-mdb-ripple-color="dark">Register</button>
   
