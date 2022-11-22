@@ -1,3 +1,4 @@
+
 // slider 
 // slider 
 // slider 
@@ -16,12 +17,9 @@ window.addEventListener('load', function () {
     var indexDot = document.querySelectorAll('.slider-dot-item')
     nextBtn.addEventListener('click', function () {
         handleChangeSlide(1);
+
+
     });
-    // [...dotItem].forEach(item => item.addEventListener('click',function(e){
-    //     const slideIndex = e.target.dataset.index
-    //     index+= slideIndex;
-    //     nextBtn
-    // }))
     prevBtn.addEventListener('click', function () {
         handleChangeSlide(-1);
     })
@@ -35,6 +33,7 @@ window.addEventListener('load', function () {
             }
             positionX = positionX - sliderItemWidth
             console.log('sliderItemWidth', positionX)
+            console.log(sliderItemWidth)
             sliderMain.style = `transform: translateX(${positionX}px)`
             ++index
             for (const key in indexDot) {
@@ -43,6 +42,7 @@ window.addEventListener('load', function () {
                     indexDot[key - 1].classList.remove('active')
                 }
             }
+
 
         } else if (direction == -1) {
 
@@ -60,8 +60,30 @@ window.addEventListener('load', function () {
                 }
             }
         }
-
-
-
     }
+    function dotAuto(){
+        var countDot = index
+        if(countDot ==4){
+            setTimeout(5000)
+            handleChangeSlide(-1);
+            handleChangeSlide(-1);
+            handleChangeSlide(-1);
+            handleChangeSlide(-1);
+            countDot=0
+        }else{
+            handleChangeSlide(1);
+        }
+        return setTimeout(() => {
+            dotAuto()
+        },4000 );
+    }
+    setTimeout(function() {
+        dotAuto()
+    }, 2000);
+
+
+    
+
+
+
 })  
