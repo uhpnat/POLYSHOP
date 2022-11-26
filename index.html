@@ -16,7 +16,7 @@
     crossorigin="anonymous"></script>
     
 <!-- //////test -->
-
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA==" crossorigin="anonymous" />
 
   <!-- enddtesst  -->
   <!-- enddtesst  -->
@@ -62,7 +62,7 @@
   }
   </script>
   <!-- header  -->
-  <header class="navbar navbar-expand-lg navbar-dark " id="top-main-navigation">
+  <header class="navbar navbar-expand-lg navbar-dark" id="top-main-navigation">
     <div class="container">
       <div class="col-lg-3 col-md-3">
         <a class="navbar-brand" href="#"><b>POLY</b>Shop</a>
@@ -144,12 +144,12 @@
     <div class="container p-0 px-3">
       <div class="slider d-lg-block d-none">
         <box-icon class="slider-prev" name="chevron-left" animation="tada-hover" color="rgba(0,0,0,0.5"></box-icon>
-        <ul class="slider-dots">
-          <li class="slider-dot-item active"></li>
-          <li class="slider-dot-item "></li>
-          <li class="slider-dot-item"></li>
-          <li class="slider-dot-item"></li>
-          <li class="slider-dot-item"></li>
+        <ul class="slider-dots" id="click-dots">
+          <li  class="slider-dot-item active"></li>
+          <li  class="slider-dot-item "></li>
+          <li  class="slider-dot-item"></li>
+          <li  class="slider-dot-item"></li>
+          <li  class="slider-dot-item"></li>
         </ul>
         <div class="slider-wrapper">
           <div class="slider-main">
@@ -530,9 +530,24 @@
     </footer>
     <!-- Footer -->
   </div>
+  <!-- /////////////////////// -->
+  
+
+
+<script>
+  function showSuccessToast() {
+    toast({
+      title: "Thành công!",
+      message: "Đã Thêm Vào Giỏ Hàng .",
+      duration: 5000
+    });
+  }
+</script>
+  <!-- ////////////////////////////// -->
   <script src="https://unpkg.com/boxicons@2.1.4/dist/boxicons.js"></script>
   <script src="./thongtiniphone.js"></script>
   <script src="./js.js"></script>
+  <script src="./toastMess.js"></script>
   
 </body>
 

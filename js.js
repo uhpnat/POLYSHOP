@@ -32,8 +32,6 @@ window.addEventListener('load', function () {
                 return
             }
             positionX = positionX - sliderItemWidth
-            console.log('sliderItemWidth', positionX)
-            console.log(sliderItemWidth)
             sliderMain.style = `transform: translateX(${positionX}px)`
             ++index
             for (const key in indexDot) {
@@ -64,7 +62,7 @@ window.addEventListener('load', function () {
     function dotAuto(){
         var countDot = index
         if(countDot ==4){
-            setTimeout(5000)
+            setTimeout(6000)
             handleChangeSlide(-1);
             handleChangeSlide(-1);
             handleChangeSlide(-1);
@@ -75,15 +73,43 @@ window.addEventListener('load', function () {
         }
         return setTimeout(() => {
             dotAuto()
-        },4000 );
+        },6000 );
     }
     setTimeout(function() {
         dotAuto()
     }, 2000);
 
+    function clickDots(VlIndex){
+        var countDots = Math.abs(VlIndex-index)
+        var i=0
+        console.log(countDots)
+        if(VlIndex>index){
+            for(i;i<=countDots-1;i++){
+                handleChangeSlide(1);
+            }
+        }else if(VlIndex<index){
+            for(i;i<=countDots-1;i++){
+                handleChangeSlide(-1);
+            }
+        }else{
 
-    
+        }
+        
+    }
+    dotItem[0].addEventListener('click',function(){
+        clickDots(0)
+    })
+    dotItem[1].addEventListener('click',function(){
+        clickDots(1)
+    })
+    dotItem[2].addEventListener('click',function(){
+        clickDots(2)
+    })
+    dotItem[3].addEventListener('click',function(){
+        clickDots(3)
+    })
+    dotItem[4].addEventListener('click',function(){
+        clickDots(4)
+    })
 
-
-
-})  
+})

@@ -166,7 +166,8 @@ function showItems(name, data, soLuong) {
         <h6>Giá từ: ${data[key].giaIphone.toLocaleString()}₫</h6>
         <p>Hot Sale giá chỉ: ${data[key].giamGiaIphone.toLocaleString()}₫</p>
         <div class="row btn--iphone ">
-                  <div class="col-12"><button type="button" class="btn btn-outline-danger w-100" onclick="indexAddCart(${key})">Thêm vào giỏ</button></div>
+        
+                  <div class="col-12"><button type="button" class="btn btn-outline-danger w-100" onclick="indexAddCart(${key}),showSuccessToast()">Thêm vào giỏ</button></div>
                 </div>
     </div>
     </div>`
@@ -302,7 +303,7 @@ function indexAddCart(index) {
     dataIphone[index].valueIP += 1
     itemShopping('IDitemCart', dataIphone)
     itemShoppingMini('IDitemCart-mini', dataIphone)
-    if(dataIphone[index].valueIP==1){
+    if (dataIphone[index].valueIP == 1) {
         // alert('Sản phẩm đã được thêm vào giỏ hàng')
     }
     resetSoLuong()
@@ -346,9 +347,9 @@ function dlNoneShow() {
     document.querySelector('.khongChoBam').classList.add('d-flex')
     document.querySelector('.choBam').classList.remove('d-flex')
 }
-function xoaAll(){
+function xoaAll() {
     for (const key in dataIphone) {
-        dataIphone[key].valueIP =0
+        dataIphone[key].valueIP = 0
         console.log(dataIphone[key].valueIP)
         xoaSP(key)
     }
@@ -356,24 +357,15 @@ function xoaAll(){
 
 }
 
-//   document.addEventListener(('contextmenu'),function(event){
-//     event.preventDefault();
-//     openNav()
 
-//   })
-//   document.addEventListener('click',function(){
-//     // closeNav()
-//   })
-
-
-  window.addEventListener('scroll',function(){
+window.addEventListener('scroll', function () {
     var scrollBackToTop = this.document.querySelector('.scrollTop')
-    scrollBackToTop.classList.toggle('active',window.scrollY > 500)
-    
-  })
-  function scrollTopne(){
+    scrollBackToTop.classList.toggle('active', window.scrollY > 500)
+
+})
+function scrollTopne() {
     window.scrollTo({
-        top:0,
+        top: 0,
         behavior: 'smooth'
     })
 }
