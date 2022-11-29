@@ -128,12 +128,17 @@ var dataIpad = [
         giaIphone: '??????'
     },
 ]
-
+document.getElementById('top-main-navigation').style = "    position: fixed; top : 0px ; width : 100% ; z-index : 99"
+console.log(document.getElementById('top-main-navigation'))
 var tongGia = 0
 function resetSoLuong() {
     var soLuong = 0
     for (const key in dataIphone) {
         soLuong += dataIphone[key].valueIP
+    }
+    if(soLuong==0){
+    document.getElementById('xoaall').innerHTML = ''
+
     }
     document.querySelectorAll('.sll')[0].innerHTML = soLuong
     document.querySelectorAll('.sll')[1].innerHTML = soLuong
@@ -253,6 +258,7 @@ function itemShopping(name, data, soLuong) {
         <img class="w-25 d-flex mx-auto" src="./img/add-to-cart.png" alt="">`
         document.getElementById('xoaall').innerHTML = ''
     }
+    
 }
 ////////////////////
 function itemShoppingMini(name, data, soLuong) {
@@ -280,6 +286,7 @@ function itemShoppingMini(name, data, soLuong) {
       </div>
     
       <hr class="my-4">`
+      
         if (data[key].valueIP >= 1) {
             ++sttHien
             htmlWebs += showItem
@@ -304,10 +311,11 @@ function indexAddCart(index) {
     itemShopping('IDitemCart', dataIphone)
     itemShoppingMini('IDitemCart-mini', dataIphone)
     if (dataIphone[index].valueIP == 1) {
-        // alert('Sản phẩm đã được thêm vào giỏ hàng')
+        toastMess()
     }
     resetSoLuong()
     resetGia()
+    
 }
 function tangSoLuong(index) {
     document.querySelector('.valueSL').value = +document.querySelector('.valueSL').value + 1
@@ -369,3 +377,10 @@ function scrollTopne() {
         behavior: 'smooth'
     })
 }
+   function toastMess(){
+    var toastMess = document.getElementById('toastMess')
+    toastMess.style = 'display :block ; '
+    setTimeout(() => {
+    toastMess.style = 'display :none ; '
+    }, 2000);
+   }

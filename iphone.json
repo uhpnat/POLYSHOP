@@ -1,0 +1,69 @@
+{
+    "sinhVien": [
+        {
+            "imgThongBao": "./img/top-mungkhaitruong.svg",
+            "imgIphone": "./img/ip14/iPhone14-ShopDunk-do.png",
+            "tenIphone": "iPhone 14 ",
+            "dungLuong": "64GB",
+            "valueIP": 0,
+            "giamGiaIphone": "??????",
+            "giaIphone": 10000
+        }, {
+            "imgThongBao": "./img/top-moi.svg",
+            "imgIphone": "./img/ip14/iPhone14-ShopDunk-purple.png",
+            "tenIphone": "iPhone 14 ",
+            "dungLuong": "128GB",
+            "valueIP": 0,
+            "giamGiaIphone": "??????",
+            "giaIphone": 11000
+        }, {
+            "imgThongBao": "./img/top-hangsan.svg",
+            "imgIphone": "./img/ip14/iPhone14-ShopDunk-Midnight.png",
+            "tenIphone": "iPhone 14 ",
+            "dungLuong": "256GB",
+            "valueIP": 0,
+            "giamGiaIphone": "??????",
+            "giaIphone": 12000
+        }, {
+            "imgThongBao": "./img/top-moi.svg",
+            "imgIphone": "./img/ip14/iPhone14-ShopDunk-blue.png",
+            "tenIphone": "iPhone 14 ",
+            "dungLuong": "512GB",
+            "valueIP": 0,
+            "giamGiaIphone": "??????",
+            "giaIphone": 13000
+        }, {
+            "imgThongBao": "./img/top-moi.svg",
+            "imgIphone": "./img/ip13/iphone-13-pro-max-blue-650x650-1.png",
+            "tenIphone": "iPhone 13 Blue ",
+            "dungLuong": "512GB",
+            "valueIP": 0,
+            "giamGiaIphone": "??????",
+            "giaIphone": 9000
+        }, {
+            "imgThongBao": "./img/top-moi.svg",
+            "imgIphone": "./img/ip13/iphone-13-pro-max-gold-650x650-2.png",
+            "tenIphone": "iPhone 13 Gold ",
+            "dungLuong": "512GB",
+            "valueIP": 0,
+            "giamGiaIphone": "??????",
+            "giaIphone": 8000
+        }, {
+            "imgThongBao": "./img/top-moi.svg",
+            "imgIphone": "./img/ip13/iphone-13-pro-max-gold-650x650-2.png",
+            "tenIphone": "iPhone 13 Gold ",
+            "dungLuong": "512GB",
+            "valueIP": 0,
+            "giamGiaIphone": "??????",
+            "giaIphone": 8000
+        }, {
+            "imgThongBao": "./img/top-moi.svg",
+            "imgIphone": "./img/ip13/iphone-13-pro-max-gold-650x650-2.png",
+            "tenIphone": "iPhone 13 Gold ",
+            "dungLuong": "512GB",
+            "valueIP": 0,
+            "giamGiaIphone": "??????",
+            "giaIphone": 8000
+        }
+    ]
+  }

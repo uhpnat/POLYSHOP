@@ -302,3 +302,48 @@
     visibility: visible;
   }
 }
+@keyframes toastPhu {
+  from {
+    opacity: 0;
+    margin-top: 150px;
+
+  }
+  to {
+    opacity: 1;
+    margin-top: 200px;
+
+  }
+}
+
+#toastMess{
+  display: none;
+  position: fixed;
+  top: 0px;
+  width: 100%;
+  z-index: 99;
+  height: 100vh;
+  background-color: #00000051;
+  padding: 10px;
+  cursor: not-allowed;
+  box-shadow: rgba(0, 0, 6, 0.2) 0px 7px 29px 0px;
+  .allToast{
+    animation-duration: 1s;
+  animation-name: toastPhu;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+    padding-top: 10px;
+    // top: 0px;
+    height: 250px;
+    width: 400px;
+    background-color: #ffffff;
+    border-radius: 10px;
+    margin-left: auto;
+    margin-right: auto;
+    box-icon{
+      margin-top: 40px;
+      display: flex;
+      margin-left: auto;
+      margin-right: auto;
+    }
+  }
+}
