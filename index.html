@@ -25,25 +25,89 @@
 
 </head>
 
-<body style="background-color: #f2f2f2;">
-<div class="scrollTop" onclick="scrollTopne()">
-  
-  <box-icon name='caret-up-circle' type='solid' color='#0691ee' size="lg"  animation='tada-hover' border='circle' ></box-icon>
-</div>
-  
-  
-  <!-- toast   -->
 
+
+<!-- ////phanlogin -->
+
+
+
+<body style="background-color: #f2f2f2;">
+ <div id="lightDark">
+  <div id="signup1">
+    <div class="main">
+      <form action="" method="POST" class="form" id="form-1">
+    <div id="icon"  onclick="openSignup()" class="bx-tada-hover" style="fill: red; cursor: pointer;"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M16 2H8C4.691 2 2 4.691 2 8v13a1 1 0 0 0 1 1h13c3.309 0 6-2.691 6-6V8c0-3.309-2.691-6-6-6zm4 14c0 2.206-1.794 4-4 4H4V8c0-2.206 1.794-4 4-4h8c2.206 0 4 1.794 4 4v8z"></path><path d="M15.292 7.295 12 10.587 8.708 7.295 7.294 8.709l3.292 3.292-3.292 3.292 1.414 1.414L12 13.415l3.292 3.292 1.414-1.414-3.292-3.292 3.292-3.292z"></path></svg></div>
+  
+        <h3 class="heading">Đăng ký</h3>
+  
+        <div class="spacer"></div>
+  
+        <div class="form-group">
+          <label for="fullname" class="form-label">Tên đầy đủ</label>
+          <input id="fullname" name="fullname" type="text" placeholder="VD: Tấn Phú" class="form-control">
+          <span class="form-message"></span>
+        </div>
+  
+        <div class="form-group">
+          <label for="email" class="form-label">Email</label>
+          <input id="email" name="email" type="text" placeholder="VD: email@domain.com" class="form-control">
+          <span class="form-message"></span>
+        </div>
+  
+        <div class="form-group">
+          <label for="password" class="form-label">Mật khẩu</label>
+          <input id="password" name="password" type="password" placeholder="Nhập mật khẩu" class="form-control">
+          <span class="form-message"></span>
+        </div>
+  
+        <div class="form-group">
+          <label for="password_confirmation" class="form-label">Nhập lại mật khẩu</label>
+          <input id="password_confirmation" name="password_confirmation" placeholder="Nhập lại mật khẩu" type="password" class="form-control">
+          <span class="form-message"></span>
+        </div>
+  
+        <button class="form-submit">Đăng ký</button>
+      </form>
+    </div>
+  </div>
+  <div id="login1">
+    <div class="main">
+  
+    <form action="" method="POST" class="form" id="form-2">
+    <div id="icon"  onclick="openLogin()" class="bx-tada-hover" style="fill: red; cursor: pointer;"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M16 2H8C4.691 2 2 4.691 2 8v13a1 1 0 0 0 1 1h13c3.309 0 6-2.691 6-6V8c0-3.309-2.691-6-6-6zm4 14c0 2.206-1.794 4-4 4H4V8c0-2.206 1.794-4 4-4h8c2.206 0 4 1.794 4 4v8z"></path><path d="M15.292 7.295 12 10.587 8.708 7.295 7.294 8.709l3.292 3.292-3.292 3.292 1.414 1.414L12 13.415l3.292 3.292 1.414-1.414-3.292-3.292 3.292-3.292z"></path></svg></div>
+  
+      <h3 class="heading">Đăng nhập</h3>
+      <div class="spacer"></div>
+      <div class="form-group">
+        <label for="email" class="form-label">Email</label>
+        <input id="email" name="email" type="text" placeholder="VD: email@domain.com" class="form-control">
+        <span class="form-message"></span>
+      </div>
+      <div class="form-group">
+        <label for="password" class="form-label">Mật khẩu</label>
+        <input id="password" name="password" type="password" placeholder="Nhập mật khẩu" class="form-control">
+        <span class="form-message"></span>
+      </div>
+      <button class="form-submit">Đăng nhập</button>
+    </form>
+  
+  </div>
+  </div>
+  <!-- ////phanlogin -->
+  <!-- ////phanlogin -->
+<div class="scrollTop" onclick="scrollTopne()">
+  <box-icon name='caret-up-circle' type='solid' size="lg"  animation='tada-hover' border='circle' ></box-icon>
+</div>
+  <!-- toast   -->
   <div id="toastMess">
     <div class="allToast">
-      <box-icon name='check-circle' color='#2ec40e'  animation='tada' size='lg'></box-icon>
+      <box-icon id="toastTB" color='#2ec40e'  animation='tada' size='lg'></box-icon>
       <br>
-      <h4 class="text-center mt-3">Thêm sản phẩm thành công</h4>
+      <h4 id="toastThongBao" class="text-center mt-3"></h4>
     </div>
   </div>
   <!-- toast   -->
   <!-- toast   -->
-
   <div style="width: 500px; transform:translateX(600px) ; z-index: 999;" id="mySidenav" class="sidenav">
     <a style="cursor:pointer" class="closebtn" onclick="closeNav()"><box-icon name='message-square-x' animation='tada-hover' size='md' color="red" ></box-icon></a>
     <div class="pd-mini">
@@ -73,6 +137,7 @@
     <div class="container">
       <div class="col-lg-3 col-md-3">
         <a class="navbar-brand" href="#"><b>POLY</b>Shop</a>
+        <a class="navbar-brand"><img id="light" style="height:30px ; transition: 1s;" src="https://cdn1.iconfinder.com/data/icons/school-set-1/512/20-64.png" alt=""></a>
       </div>
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
         aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -95,10 +160,12 @@
               <a class="nav-link pr-2" aria-current="page" onclick="clicknav(2)" style="cursor: pointer;">IPHONE</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link disabled" aria-current="page" href="./ipad.html">Ipad</a>
+              <a class="nav-link" aria-current="page" style="cursor: pointer; " onclick="openSignup()">Signup</a>
+
             </li>
             <li class="nav-item pr-5">
-              <a class="nav-link disabled" aria-current="page" href="./watch.html">Watch</a>
+              <a class="nav-link" aria-current="page" style="cursor: pointer;" onclick="openLogin()">Login</a>
+
             </li>
 
             <li class="nav-item"></li>
@@ -116,7 +183,7 @@
       </div>
     </div>
   </header>
-<div style="height: 50px;"></div>
+<div id="heighttttt"></div>
   <!-- nav  -->
   
   
@@ -207,8 +274,7 @@
         <div class="row pb-5 px-0" id="iphone">
           <!-- ////////////////////////////// -->
         </div>
-        <button type="button" class="btn btn-outline-primary ml-auto mr-auto d-flex d-none khongChoBam" onclick="showItems('iphone',dataIphone), dlBlockShow()">Xem tất cả iPhone ></button>
-        <button type="button" class="btn btn-outline-primary ml-auto mr-auto d-none  d-none choBam" onclick="showItems('iphone',dataIphone,4), dlNoneShow()">thu gọn lại ^</button>
+        <button type="button" class="btn btn-outline-primary ml-auto mr-auto d-flex d-none khongChoBam" >Xem tất cả</button>
       </div>
     </div>
     <h1 class="text-center mt-4">iPad</h1>
@@ -537,6 +603,7 @@
     </footer>
     <!-- Footer -->
   </div>
+ </div>
   <!-- /////////////////////// -->
   
 
@@ -552,10 +619,74 @@
 </script>
   <!-- ////////////////////////////// -->
   <script src="https://unpkg.com/boxicons@2.1.4/dist/boxicons.js"></script>
-  <script src="./thongtiniphone.js"></script>
   <script src="./js.js"></script>
-  <script src="./toastMess.js"></script>
-  
+  <script src="./jsJson.js"></script>
+  <script src=".//vali.js"></script>
+  <script>
+
+    document.addEventListener('DOMContentLoaded', function () {
+      Validator({
+        form: '#form-1',
+        formGroupSelector: '.form-group',
+        errorSelector: '.form-message',
+        rules: [
+          Validator.isRequired('#fullname', 'Vui lòng nhập tên đầy đủ của bạn'),
+          Validator.isEmail('#email'),
+          Validator.minLength('#password', 6),
+          Validator.isRequired('#password_confirmation'),
+          Validator.isConfirmed('#password_confirmation', function () {
+            return document.querySelector('#form-1 #password').value;
+          }, 'Mật khẩu nhập lại không chính xác')
+        ],
+        onSubmit: function (data) {
+             let user = {
+             email: data.email,
+              password: data.password,
+             };
+              let json = JSON.stringify(user);
+              localStorage.setItem(data.email, json);
+              toastMess('Đăng ký thành công')
+              setTimeout(() => {
+                openLogin()
+              }, 2300);
+              console.log(data)
+              console.log(user);
+        }
+      });
+
+
+      Validator({
+        form: '#form-2',
+        formGroupSelector: '.form-group',
+        errorSelector: '.form-message',
+        rules: [
+          Validator.isEmail('#email'),
+          Validator.minLength('#password', 6),
+        ],
+        onSubmit: function (data) {
+
+          let user = {
+             email: data.email,
+              password: data.password,
+             };
+            let json = JSON.stringify(user);
+            console.log(json)
+            if (localStorage.getItem(data.email) == json) {
+              toastMess('Đăng nhập thành công')
+              openLogin()
+
+            //lam coogn việc khi đăng nhập thành công
+          } else {
+            toastMess('Đăng nhập Thất bại',1)
+
+  }
+          // Call API
+          // console.log(data);
+        }
+      });
+    });
+
+  </script>
 </body>
 
 

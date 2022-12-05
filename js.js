@@ -17,8 +17,6 @@ window.addEventListener('load', function () {
     var indexDot = document.querySelectorAll('.slider-dot-item')
     nextBtn.addEventListener('click', function () {
         handleChangeSlide(1);
-
-
     });
     prevBtn.addEventListener('click', function () {
         handleChangeSlide(-1);

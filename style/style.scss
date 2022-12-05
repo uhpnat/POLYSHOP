@@ -4,6 +4,7 @@
     padding: 0px;
     margin: 0px;
     box-sizing: border-box;
+    user-select: none;
 }
 
   .sidenav {
@@ -93,6 +94,9 @@
     }
 
 }
+.fixedPhu{
+  top: 0px;
+}
 // slide 
 // slide 
 // slide 
@@ -107,6 +111,7 @@
     Gradient{0%{background-position:0 50%}50%{background-position:100% 50%}100%{background-position:0 50%};
     }
      .bg-mausac:hover{
+      position: fixed ;
       background: 
       linear-gradient(-50deg,#c50000,#0cff79,#edea19,#0691ee);background-size: 320% 200%;-webkit-animation: 
     
@@ -169,6 +174,7 @@
     background-color: white;
   }
   .slider-wrapper {
+    box-shadow: rgba(0, 0, 0, 0.2) 0px 18px 50px -10px;
     border-radius: 10px;
     
     width: 100%;
@@ -194,7 +200,57 @@
     object-fit: cover;
     // border-radius: 5px;
   }
-  
+  body{
+    transition: 0.4s;
+  }
+  .lightDark{
+    transition: 0.4s;
+    .main{
+      .form{
+      background: rgba(255, 255, 255, 0.826) !important;
+
+      }
+      background: rgba(0, 0, 0, 0.575) !important;
+    }
+    #IDitemCart-mini{
+      h6{
+        color: white;
+      }
+    }
+    h1{
+      color: white;
+    }
+    #nonecart{
+    transition: 0.4s;
+
+      .card{
+        h1{
+          color: white;
+        }
+        background: rgba(255, 255, 255, 0.092) !important;
+      }
+      section{
+        background: black !important;
+      }
+    }
+    .sidenav{
+    transition: 0.4s;
+
+      background: rgba(0, 0, 0, 0.784);
+    }
+    background: black !important;
+    header{
+      background: black !important;
+    }
+    .shop-iphone--item{
+    transition: 0.4s;
+
+      background: rgba(38, 37, 37, 0.367) !important;
+      h5{
+        color: white;
+      }
+    }
+  }
 
   ///////////////@at-root
   /// cart
@@ -346,4 +402,147 @@
       margin-right: auto;
     }
   }
+}
+
+
+
+
+.quangcao-3{
+  .col-4{
+    img{
+      border-radius: 5px;
+      box-shadow: rgba(17, 17, 26, 0.1) 0px 4px 16px, rgba(17, 17, 26, 0.1) 0px 8px 24px, rgba(17, 17, 26, 0.1) 0px 16px 56px;
+    }
+  }
+}
+
+
+#signup1, #login1{
+  display: none;
+  @keyframes loginPhu {
+    from {
+      opacity: 0;
+      margin-top: 250px;
+  
+    }
+    to {
+      opacity: 1;
+  
+    }
+  }
+  transition: 2s;
+  .outLogin{
+    position: relative;
+
+    top: 80px;
+    left: 1122px;
+  }
+  // display: none;
+  position: fixed;
+  top: 0px;
+  width: 100%;
+  z-index: 99;
+  height: 100vh;
+  background-color: #00000051;
+  padding: 10px;
+  .main {
+    background: #f1f1f1c6;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+}
+.form {
+  #icon{
+    display: flex;
+    justify-content: end;
+  }
+  animation-duration: 1s;
+  animation-name: loginPhu;
+    width: 450px;
+    min-height: 100px;
+    padding: 32px 24px;
+    text-align: center;
+    background: #fff;
+    border-radius: 2px;
+    margin: 24px;
+    align-self: center;
+    box-shadow: 0 2px 5px 0 rgba(51,62,73,.1);
+}
+
+.form .desc {
+    text-align: center;
+    color: #636d77;
+    font-size: 1.6rem;
+    font-weight: lighter;
+    line-height: 2.4rem;
+    margin-top: 16px;
+    font-weight: 300;
+}
+
+.form-group {
+    display: flex;
+    // margin-bottom: 16px;
+    flex-direction: column;
+}
+
+.form-label,
+.form-message {
+    text-align: left;
+}
+
+.form-label {
+    font-weight: 700;
+    // padding-bottom: 6px;
+}
+
+.form-control {
+    height: 40px;
+    padding: 8px 12px;
+    border: 1px solid #b3b3b3;
+    border-radius: 3px;
+    outline: none;
+
+}
+
+.form-control:hover {
+    border-color: #1dbfaf;
+}
+
+.form-group.invalid .form-control {
+    border-color: #f33a58;
+}
+
+.form-group.invalid .form-message {
+    color: #f33a58;
+}
+
+.form-message {
+    line-height: 1.6rem;
+    padding: 4px 0 0;
+}
+
+.form-submit {
+    outline: none;
+    background-color: #1dbfaf;
+    margin-top: 12px;
+    padding: 12px 16px;
+    font-weight: 600;
+    color: #fff;
+    border: none;
+    width: 100%;
+    font-size: 14px;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+.form-submit:hover {
+    background-color: #1ac7b6;
+}
+
+.spacer {
+    margin-top: 36px;
+}
+}
+body{
+  transition: 1s;
 }
