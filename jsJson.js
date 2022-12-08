@@ -130,6 +130,7 @@ function indexAddCart(index) {
            $id('xoaall').innerHTML = ''
 
         }
+        $id('slShopMini').innerHTML = soLuong
         $$('.sll')[0].innerHTML = soLuong
         $$('.sll')[1].innerHTML = soLuong
         
@@ -224,9 +225,16 @@ function itemShoppingMini(name, data, soLuong) {
       <hr class="my-4">`
       
         if (data[key].valueIP >= 1) {
+    var soSanPham =0
+                //sttHien là số sản phẩm được in ra
+                // soSanPham là tổng số luọng sản phẩm
+            data.forEach(element => {
+                soSanPham +=  element.valueIP
+                console.log(soSanPham)
+            });
             ++sttHien
             htmlWebs += showItem
-           $id('xoaall').innerHTML = `<button type="button" class="btn btn-danger" onclick="xoaAll()">Xóa Tất Cả (${sttHien}) </button>`
+           $id('xoaall').innerHTML = `<button type="button" class="btn btn-danger" onclick="xoaAll()">Xóa Tất Cả (${soSanPham}) </button>`
         }
         if (key == soLuong - 1) {
             break
@@ -237,7 +245,7 @@ function itemShoppingMini(name, data, soLuong) {
     if (sttHien == 0) {
        $id(name).innerHTML = `<h4 class="text-danger text-center">Giỏ hàng trống</h4>
         <img class="w-25 d-flex mx-auto" src="./img/add-to-cart.png" alt="">`
-       $id('xoaall').innerHTML = `<button type="button" class="btn btn-danger" onclick="xoaAll()">Xóa Tất Cả (${sttHien}) </button>`
+       $id('xoaall').innerHTML = `<button type="button" class="btn btn-danger" onclick="xoaAll()">Xóa Tất Cả (${soSanPham}) </button>`
 
     }
 }
